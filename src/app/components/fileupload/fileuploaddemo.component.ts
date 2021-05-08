@@ -20,7 +20,9 @@ export class FileUploadDemoComponent {
     }
     
     onBasicUpload(event) {
+      console.log("hi")
         this.messageService.add({severity: 'info', summary: 'Success', detail: 'File Uploaded with Basic Mode'});
+              console.log("Bye")
     }
     
     onBasicUploadAuto(event) {
