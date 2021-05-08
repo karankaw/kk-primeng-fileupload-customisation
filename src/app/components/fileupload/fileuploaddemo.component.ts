@@ -3,7 +3,7 @@ import { MessageService } from 'primeng/api';
 
 @Component({
   templateUrl: './fileuploaddemo.html',
-  providers: [MessageService]
+  providers: []
 })
 export class FileUploadDemoComponent {
   uploadedFiles: any[] = [];
