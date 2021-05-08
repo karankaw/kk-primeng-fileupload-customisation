@@ -7,7 +7,7 @@ import { HomeComponent } from './home.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       {
-        path: 'setup',
+        path: 'fileUploadDemo',
         loadChildren: () =>
           import('./components/fileupload/fileuploaddemo.component').then(
             m => m.FileUploadDemoComponent
