@@ -6,12 +6,14 @@ import { HomeComponent } from './home.component';
   imports: [
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-     
 
-        {path: 'fileupload', loadChildren: () => import('./components/fileupload/fileuploaddemo.module').then(m => m.FileUploadDemoModule)},
-
-
-
+      {
+        path: 'fileupload',
+        loadChildren: () =>
+          import('./components/fileupload/fileuploaddemo.module').then(
+            m => m.FileUploadDemoModule
+          )
+      }
     ])
   ],
   exports: [RouterModule]
