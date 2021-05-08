@@ -7,16 +7,16 @@ import { AppComponent } from './app.component';
 import { FileUploadDemoModule } from './components/fileupload/fileuploaddemo.module';
 import { FileUploadDemoComponent } from './components/fileupload/fileuploaddemo.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
-    AppRoutingModule,
-    FileUploadDemoModule
+    AppRoutingModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
