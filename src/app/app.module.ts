@@ -1,20 +1,43 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+
+import { ButtonModule } from 'primeng/button';
+import { TooltipModule } from 'primeng/tooltip';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { InputSwitchModule } from 'primeng/inputswitch';
+
+import { AppDemoActionsModule } from './app.demoactions.component';
 import { HomeComponent } from './home.component';
 
+
 @NgModule({
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    RouterModule,
-    AppRoutingModule
-  ],
-  declarations: [AppComponent, HomeComponent],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent
+      ],
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        AutoCompleteModule,
+        ButtonModule,
+        RadioButtonModule,
+        InputSwitchModule,
+        TooltipModule,
+        AppDemoActionsModule,
+    ],
+    providers: [
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
