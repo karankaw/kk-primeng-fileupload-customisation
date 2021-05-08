@@ -1,15 +1,14 @@
 <div class="card">
-    <h5>Advanced</h5>
-    <p-fileUpload name="demo[]" chooseLabel="Choose File"
-    uploadLabel="Import"
-    cancelLabel="Cancel"
-    url="./upload.php" (onUpload)="onBasicUpload($event)"
-            multiple="multiple" accept="image/*" maxFileSize="1000000">
-            <ng-template pTemplate="content">
-                <ul *ngIf="uploadedFiles.length">
-                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
-                </ul>
-            </ng-template>
-    </p-fileUpload>
+  <h5>Advanced</h5>
+  <p-fileUpload name="demo[]" chooseLabel="Choose File" uploadLabel="Import" cancelLabel="Cancel" chooseIcon=""
+    uploadIcon="" cancelIcon="" url="./upload.php" (onUpload)="onBasicUpload($event)" multiple="multiple"
+    accept="image/*" maxFileSize="1000000">
+    <ng-template pTemplate="content">
+      <ul *ngIf="uploadedFiles.length">
+        <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+      </ul>
+    </ng-template>
+  </p-fileUpload>
 
-    <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onBasicUpload($event)" [auto]="true"></p-fileUpload>
+  <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000"
+    (onUpload)="onBasicUpload($event)" [auto]="true"></p-fileUpload>
