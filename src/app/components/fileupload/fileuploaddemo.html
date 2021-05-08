@@ -1,6 +1,9 @@
 <div class="card">
     <h5>Advanced</h5>
-    <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
+    <p-fileUpload name="demo[]" chooseLabel="Choose File"
+    uploadLabel="Import"
+    cancelLabel="Cancel"
+    url="./upload.php" (onUpload)="onUpload($event)"
             multiple="multiple" accept="image/*" maxFileSize="1000000">
             <ng-template pTemplate="content">
                 <ul *ngIf="uploadedFiles.length">
