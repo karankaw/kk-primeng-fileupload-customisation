@@ -5,11 +5,12 @@ import { HomeComponent } from './home.component';
 @NgModule({
   imports: [
     RouterModule.forRoot([
-       {path: '', component: HomeComponent},
-        {path: '/fileUploadDemo',
+      { path: '', component: HomeComponent },
+      {
+        path: 'setup',
         loadChildren: () =>
-          import('./components/fileupload/fileuploaddemo.module').then(
-            m => m.FileUploadDemoModule
+          import('./components/fileupload/fileuploaddemo.component').then(
+            m => m.FileUploadDemoComponent
           )
       }
     ])
