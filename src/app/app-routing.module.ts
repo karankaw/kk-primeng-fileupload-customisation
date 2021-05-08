@@ -4,7 +4,15 @@ import { FileUploadDemoComponent } from './components/fileupload/fileuploaddemo.
 
 @NgModule({
   imports: [
-    RouterModule.forRoot([{ path: '', component: FileUploadDemoComponent }])
+    RouterModule.forRoot([
+      {
+        path: '',
+        loadChildren: () =>
+          import('./components/fileupload/fileuploaddemo.module').then(
+            m => m.FileUploadDemoModule
+          )
+      }
+    ])
   ],
   exports: [RouterModule]
 })

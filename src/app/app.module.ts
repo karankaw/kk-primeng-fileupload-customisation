@@ -14,7 +14,7 @@ import { FileUploadDemoComponent } from './components/fileupload/fileuploaddemo.
     RouterModule,
     FileUploadDemoModule
   ],
-  declarations: [AppComponent, FileUploadDemoComponent],
+  declarations: [AppComponent,FileUploadDemoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
