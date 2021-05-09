@@ -1,12 +1,13 @@
 <div class="card">
   <h5>Advanced</h5>
 
-<p-toast></p-toast>
-  <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize="1000000"
-    (onUpload)="onBasicUpload($event)" [auto]="true"></p-fileUpload>
+  <p-toast></p-toast>
+
 
 
   <p-fileUpload name="myfile[]" customUpload="true" (uploadHandler)="myUploader($event)" chooseLabel="Choose File"
     uploadLabel="Import" cancelLabel="Cancel" chooseIcon="" uploadIcon="" cancelIcon=""
-    (uploadHandler)="onBasicUpload($event)" multiple="multiple" accept=".json" maxFileSize="1000000"
-    ></p-fileUpload>
+    (uploadHandler)="onBasicUpload($event)" multiple="multiple" accept=".json" maxFileSize="1000000" multiple=false>
+  </p-fileUpload>
+
+  <!--url="./upload.php" mode="basic"-->
