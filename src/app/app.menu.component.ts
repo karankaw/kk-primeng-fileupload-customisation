@@ -43,7 +43,7 @@ declare let gtag: Function;
         </p-autoComplete>
       </div>
       <div class="layout-menu">
-        <div class="menu-category"></div>
+        <div class="menu-category">G</div>
         <div class="menu-items">
           <a
             [routerLink]="['/setup']"
